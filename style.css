@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.resume-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Profile Picture */
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile-label img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid #4CAF50;
+    transition: transform 0.3s ease;
+}
+
+.profile-label img:hover {
+    transform: scale(1.05);
+}
+
+.profile-label span {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Personal Info Section */
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.personal-info h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.8em; /* Increased heading size */
+}
+
+.personal-info input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.1em;
+    border: 5px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.personal-info input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+/* Sections for Skills, Experience, Education, etc. */
+.sections {
+    margin-top: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 1.5em; /* Adjusted heading size */
+    color: #333;
+    margin-bottom: 10px;
+    border-left: 6px solid #4CAF50;
+    padding-left: 10px;
+}
+
+.section textarea,
+.section input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section textarea:focus,
+.section input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+/* Hover and Active Styles */
+.section textarea:hover,
+.section input[type="text"]:hover,
+.personal-info input:hover {
+    border-color: #4CAF50;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    .personal-info h2,
+    .section h2 {
+        font-size: 1.5em; /* Slightly smaller on mobile */
+    }
+
+    .personal-info input,
+    .section textarea,
+    .section input[type="text"] {
+        width: 100%; /* Full width on mobile */
+        padding: 8px;
+        font-size: 1em;
+    }
+}
+
